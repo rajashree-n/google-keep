@@ -1,5 +1,5 @@
 # google-keep
-A page similar to google keep app.
+A page similar to google keep app (todo list app).
 
 Requirements : 
 Web Browser
