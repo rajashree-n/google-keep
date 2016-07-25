@@ -1,17 +1,17 @@
 function addItem() {
 var text = $("#form").val();
-$("#todo").append('<div class="box one"><div id="shade"><div class="header" id="header">' +text+ '</div><div class="container"><button class="delete mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Delete </button> <button class="strike mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Done </button> <p><button type="button" id="btnc" onclick="blue()" style="background-color:#20b2aa"></button><button type="button"id="btnc" onclick="orange()" style="background-color:#ff8c00"></button><button type="button" id="btnc" onclick="green()" style="background-color:green"></button><button type="button" id="btnc" onclick="pink()" style="background-color:pink"></button></p></div></div></div>');
+$("#todo").append('<div class="box one"><div id="shade"><div class="header" id="header">' +text+ '</div><div class="container"><center><button class="delete mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> <i class="material-icons">delete</i> </button> <button class="strike mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> <i class="material-icons">done</i> </button></center> </div></div></div>');
 $("#form").val('');
 }
 function addItem1() {
 var text = $("#form").val();
-$("#todo").append('<div class="box one"><div id="shade"><div class="header"><ul id="list">' +text+ '</ul><input type="text" id="in" placeholder="Add a ToDo"/><button id="add1"> ADD</button><div class="container"><button class="delete mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Delete </button><button class="strike mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Done </button></div></div></div>');
+$("#todo").append('<div class="box one"><div id="shade"><div class="header">' +text+ '</div><div class="container"><ul id="list"></ul><input type="text" id="listval" placeholder="Add a ToDo"><button id="addtodo2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" > ADD</button><div class="container"><button class="delete mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> <i class="material-icons">delete</i> </button><button class="strike mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> <i class="material-icons">done</i> </button></div></div></div>');
 $("#form").val('');
 }
 function addIteml1() {
-var text = $("#in").val();
-$("#list").append('<li> <input type="checkbox" class="strike" />' +text+ '<button class="deletel btn btn-warning fa fa-remove"><i class="fa fa-trash-o"> </i> Delete </button></li>');
-$("#in").val('');
+var text = $("#listval").val();
+$("#list").append('<li><input type="checkbox" class="strike">' +text+ '<button class="deletel"><i class="material-icons">done</i> </button></li>');
+$("#listval").val('');
 }
 function deleteItem() {
 $(this).closest(".box").fadeOut(300);
@@ -26,14 +26,14 @@ $(this).closest(".box").css('background-color','white');
 }
 else {
 $(this).closest(".box").css('textDecoration','line-through');
-$(this).closest(".box").css('background-color','red');
+$(this).closest(".box").css('background-color','#ffa500');
 }
 }
 
 $(function() {
 $("#addtodo").on('click',addItem);
-$("#add1").on('click',addIteml1);
 $("#addtodo1").on('click',addItem1);
+$("#addtodo2").on('click',addIteml1);
 $(document).on('click','.delete',deleteItem);
 $(document).on('click','.deletel',deleteIteml);
 $(document).on('click', '.strike', strikeOut);
@@ -50,6 +50,7 @@ function readURL(input) {
     };
     reader.readAsDataURL(input.files[0]);
   }
+$("#form1").val('');
 }
 
 
@@ -88,7 +89,7 @@ function functionhide()
 {        
     document.getElementById("form").style.display="none";
     document.getElementById("form1").style.display="block";
-    document.getElementById("blah").style.display="block";
+    document.getElementById("pic").style.display="block";
     
 }
 

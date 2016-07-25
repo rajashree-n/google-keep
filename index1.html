@@ -6,7 +6,7 @@
 <!-- Material Design Lite -->
 <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.amber-indigo.min.css" /> 
-
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
 <!-- Material Design icon font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
@@ -98,7 +98,6 @@
 						<input type='file' id="form1" onchange="readURL(this);" onclick="functionhide()" />
 						<center>
 						<button id="addtodo" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">ADD Quick Note</button><button id="addtodo1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">ADD List </button>
-
 						</center>
 					</div>
 				</div>
@@ -111,12 +110,12 @@
 						<div class="mdl-grid">
   							<div class="mdl-cell mdl-cell--3-col">
 								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-								<i class="material-icons">note</i>
+								<i class="material-icons" onclick="change1()">note</i>
 								</button>
 							</div>
 		  					<div class="mdl-cell mdl-cell--3-col">
 								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-								<i class="material-icons">list</i>
+								<i class="material-icons" onclick="change2()">list</i>
 								</button>
 							</div>
 		  					<div class="mdl-cell mdl-cell--3-col">
@@ -126,7 +125,7 @@
 							</div>
 		  					<div class="mdl-cell mdl-cell--3-col">
 								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-								<i class="material-icons">photo_camera</i>
+								<i class="material-icons" onclick="change3()">photo_camera</i>
 								</button>
 							</div>
                 				 </div>
